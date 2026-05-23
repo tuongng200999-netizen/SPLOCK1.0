@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SPLOCK 1.0⚡</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="glass-panel" id="mainPanel">
+        <div class="header">
+            <div class="logo-area">
+                <i class="fas fa-bolt nova-icon"></i>
+                <span class="title">SPLOCK 1.0⚡</span>
+            </div>
+            <div class="zalo-badge">
+                <i class="fas fa-phone-alt"></i>
+                <a href="https://zalo.me/0354407521" target="_blank"><i class="fas fa-comment-dots"></i> 0354407521</a>
+            </div>
+        </div>
+
+        <!-- PHẦN KEY VỚI HẠN SỬ DỤNG -->
+        <div class="key-section" id="keySystem">
+            <div class="datetime-row">
+                <div><i class="fas fa-calendar-alt"></i> <span id="currentDate">--/--/----</span></div>
+                <div><i class="fas fa-clock"></i> <span id="currentTime">--:--:--</span></div>
+            </div>
+
+            <!-- 5 Loại Key Có HạnSử Dụng -->
+            <div class="key-options">
+                <div class="key-type-btn active" id="key7DaysBtn">
+                    <i class="fas fa-calendar-week"></i> 1 Ngày
+                </div>
+                <div class="key-type-btn" id="key30DaysBtn">
+                    <i class="fas fa-calendar-alt"></i> 30 Ngày
+                </div>
+                <div class="key-type-btn" id="key90DaysBtn">
+                    <i class="fas fa-calendar-plus"></i> 90 Ngày
+                </div>
+                <div class="key-type-btn" id="key180DaysBtn">
+                    <i class="fas fa-calendar-check"></i> 180 Ngày
+                </div>
+                <div class="key-type-btn" id="keyPermanentBtn">
+                    <i class="fas fa-infinity"></i> Vĩnh Viễn
+                </div>
+            </div>
+
+            <!-- Ô Nhập Key -->
+            <div class="key-input-area">
+                <input type="text" id="licenseKey" placeholder="🔐 NHẬP KEY KÍCH HOẠT" maxlength="30" autocomplete="off">
+            </div>
+
+            <!-- NÚT UNLOCK -->
+            <div class="unlock-wrapper">
+                <button class="unlock-btn" id="unlockBtn">
+                    <i class="fas fa-lock-open"></i> UNLOCK
+                </button>
+            </div>
+
+            <!-- Thông tin key -->
+            <div class="key-hint" id="keyHint">
+                <i class="fas fa-key"></i> Nhập Key Để Kích Hoạt. Key Có Hạn Sử Dụng Theo Gói.
+            </div>
+
+            <!-- Hiển thị thời gian hết hạn -->
+            <div id="expiryInfo" class="lock-message" style="display: none; background: #0a2a1a; border-color: #00ffaa; color: #aaffaa;">
+                <i class="fas fa-clock"></i> <span id="expiryText"></span>
+            </div>
+        </div>
+
+        <!-- MENU CHỨC NĂNG -->
+        <div id="featuresContainer" class="features-container">
+            <div class="features-grid" id="featuresGrid"></div>
+            <div id="featureStatus" class="lock-message" style="color: #aaffdd; border-color: #00ffaa;">
+                <i class="fas fa-unlock-alt"></i> Đã kích hoạt! Bật/tắt tính năng bên trên.
+            </div>
+        </div>
+
+        <!-- Thông báo khóa -->
+        <div id="globalLockMessage" class="lock-message">
+            <i class="fas fa-lock"></i> NHẬP KEY ĐỂ MỞ MENU TÍNH NĂNG
+        </div>
+
+        <!-- Thông báo hết hạn -->
+        <div id="expiredMessage" class="expired-message" style="display: none;">
+            <i class="fas fa-exclamation-triangle"></i> KEY ĐÃ HẾT HẠN! Liên Hệ Zalo 0354407521 Để Gia Hạn.
+        </div>
+
+        <div class="footer-note">
+            <span><i class="fas fa-copyright"></i> SPLOCK 1.0 </span>
+            <span><i class="fas fa-shield-alt"></i> Key Có Hạn · Zalo 0354407521</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

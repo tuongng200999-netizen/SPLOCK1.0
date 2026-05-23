@@ -1,0 +1,15 @@
+node_modules/
+dist/
+www/
+.DS_Store
+.env
+.angular/
+android/
+ios/
+*.log
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.iml
